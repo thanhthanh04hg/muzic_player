@@ -1,0 +1,72 @@
+PODS:
+  - AppAuth (1.4.0):
+    - AppAuth/Core (= 1.4.0)
+    - AppAuth/ExternalUserAgent (= 1.4.0)
+  - AppAuth/Core (1.4.0)
+  - AppAuth/ExternalUserAgent (1.4.0)
+  - EVTopTabBar (3.0.0)
+  - GoogleAPIClientForREST/Core (1.3.11):
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleAPIClientForREST/Drive (1.3.11):
+    - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleSignIn (6.0.1):
+    - AppAuth (~> 1.4)
+    - GTMAppAuth (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GTMAppAuth (1.2.2):
+    - AppAuth/Core (~> 1.4)
+    - GTMSessionFetcher/Core (~> 1.5)
+  - GTMSessionFetcher (1.6.1):
+    - GTMSessionFetcher/Full (= 1.6.1)
+  - GTMSessionFetcher/Core (1.6.1)
+  - GTMSessionFetcher/Full (1.6.1):
+    - GTMSessionFetcher/Core (= 1.6.1)
+  - Pageboy (3.6.2)
+  - Realm (10.12.0):
+    - Realm/Headers (= 10.12.0)
+  - Realm/Headers (10.12.0)
+  - RealmSwift (10.12.0):
+    - Realm (= 10.12.0)
+  - SCLAlertView (0.8)
+  - Tabman (2.11.1):
+    - Pageboy (~> 3.6.0)
+
+DEPENDENCIES:
+  - EVTopTabBar
+  - GoogleAPIClientForREST/Drive (~> 1.3.7)
+  - GoogleSignIn (~> 6.0.1)
+  - RealmSwift
+  - SCLAlertView
+  - Tabman (~> 2.11)
+
+SPEC REPOS:
+  trunk:
+    - AppAuth
+    - EVTopTabBar
+    - GoogleAPIClientForREST
+    - GoogleSignIn
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - Pageboy
+    - Realm
+    - RealmSwift
+    - SCLAlertView
+    - Tabman
+
+SPEC CHECKSUMS:
+  AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  EVTopTabBar: 0304337c7ec5d203a0bfc5b2688b79f0de6171f9
+  GoogleAPIClientForREST: 0f19a8280dfe6471f76016645d26eb5dae305101
+  GoogleSignIn: 1b0c4ec33a6fe282f4fa35d8ac64263230ddaf36
+  GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
+  GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
+  Realm: 32488213acb44660539c619d620cec1bac046166
+  RealmSwift: 0abdca6231d5ff8a4f84cef9c1121ef95a483faf
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
+
+PODFILE CHECKSUM: d06235c631cf9d02dc8d9fe97464a1b4f8e19177
+
+COCOAPODS: 1.10.1

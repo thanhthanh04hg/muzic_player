@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailRecentCollectionViewCell" id="gTV-IL-0wX" customClass="DetailRecentCollectionViewCell" customModule="cloud_offline" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="317" height="202"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="317" height="202"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown_music" translatesAutoresizingMaskIntoConstraints="NO" id="JCo-Fs-6zI">
+                        <rect key="frame" x="0.0" y="0.0" width="317" height="202"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12Y-Ju-X3f">
+                        <rect key="frame" x="15" y="159" width="158.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPi-a9-PbG">
+                        <rect key="frame" x="15" y="131" width="158.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btC-1m-7Ed">
+                        <rect key="frame" x="262" y="136.5" width="40" height="40"/>
+                        <state key="normal" image="btn_stop"/>
+                        <connections>
+                            <action selector="playMusic:" destination="gTV-IL-0wX" eventType="touchUpInside" id="UIW-iO-EHe"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="btC-1m-7Ed" secondAttribute="trailing" constant="15" id="2re-mr-F6a"/>
+                <constraint firstItem="xPi-a9-PbG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="6bf-F1-RGX"/>
+                <constraint firstAttribute="trailing" secondItem="JCo-Fs-6zI" secondAttribute="trailing" id="7ri-rc-4yB"/>
+                <constraint firstItem="JCo-Fs-6zI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CZs-nN-Reo"/>
+                <constraint firstItem="xPi-a9-PbG" firstAttribute="width" secondItem="JCo-Fs-6zI" secondAttribute="width" multiplier="0.5" id="D2k-P6-sgW"/>
+                <constraint firstItem="JCo-Fs-6zI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OXL-UD-QIB"/>
+                <constraint firstItem="12Y-Ju-X3f" firstAttribute="centerY" secondItem="xPi-a9-PbG" secondAttribute="centerY" multiplier="1.2" id="PSl-ET-FIK"/>
+                <constraint firstAttribute="bottom" secondItem="JCo-Fs-6zI" secondAttribute="bottom" id="VFZ-Th-Nkj"/>
+                <constraint firstItem="btC-1m-7Ed" firstAttribute="centerY" secondItem="JCo-Fs-6zI" secondAttribute="centerY" multiplier="1.55" id="aCI-9U-Fwg"/>
+                <constraint firstItem="12Y-Ju-X3f" firstAttribute="leading" secondItem="xPi-a9-PbG" secondAttribute="leading" id="cSW-sY-Chc"/>
+                <constraint firstItem="xPi-a9-PbG" firstAttribute="centerY" secondItem="JCo-Fs-6zI" secondAttribute="centerY" multiplier="1.4" id="m8E-Hp-F7o"/>
+                <constraint firstItem="12Y-Ju-X3f" firstAttribute="width" secondItem="xPi-a9-PbG" secondAttribute="width" id="pBr-Lt-I7a"/>
+            </constraints>
+            <size key="customSize" width="317" height="202"/>
+            <connections>
+                <outlet property="musicImage" destination="JCo-Fs-6zI" id="Wtc-m5-9Ec"/>
+                <outlet property="nameLbl" destination="xPi-a9-PbG" id="088-0y-rYA"/>
+                <outlet property="playBtn" destination="btC-1m-7Ed" id="4ek-K3-Bj1"/>
+                <outlet property="singerLbl" destination="12Y-Ju-X3f" id="fef-kK-j6f"/>
+            </connections>
+            <point key="canvasLocation" x="331.15942028985512" y="117.85714285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="btn_stop" width="40" height="40"/>
+        <image name="unknown_music" width="512" height="512"/>
+    </resources>
+</document>
