@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 import GoogleSignIn
 import GoogleAPIClientForREST
 import GTMSessionFetcher
