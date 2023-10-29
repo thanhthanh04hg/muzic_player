@@ -38,13 +38,13 @@ I needed three object for my database:
 
 | Login | Adopt |
 | :---: | :---: |
-| <img src="Screenshots/img1.png" width="400">  | <img src="Screenshots/img3adopt.png" width="400">|
+| <img src="IMG_8357.PNG" width="400">  | <img src="IMG_8357.PNG" width="400">|
 
 - Homepage and Responsive show case
 
 | Homepage | Responsive Web |
 | :---: | :---: |
-| <img src="Screenshots/img4home.png" width="400"> | <img src="Screenshots/responsive.gif" width = "400">
+| <img src="IMG_8357.PNG" width="400"> | <img src="IMG_8357.PNG" width = "400">
 
 
 #### Video Demo:
