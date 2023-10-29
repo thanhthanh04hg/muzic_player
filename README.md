@@ -22,16 +22,63 @@ My main database is Realm Swift
 - Finally, the search function allows users to search by the song category they need.
 
 ### Object database in Realm Swift:
-I needed three object for my database:
 
-- First, all musics and videos. Where I put, id, username, hash (for password) and email, notice that id must be a primary key here.
+- First is Song. This object includes name, artistName, imageName, trackName, albumName, id, urlString, imageData
+  
+- Second is Video. This object includes videoName and urlString
+  
+- Third is Album. This object includes a list of Songs and an album name
+  
+- Fourth is Playlist. This object includes the video/song list and playlist name
+  
+- Finally, Recent Videos/Recent Songs. This object includes the video/song list and count
 
-- Second, video playlist and music playlist. I put person_id, case_id, adress, email (could have referenced the users table), description, reason, photo. In photo I store the filename of the image, and in my filesystem I store all images that were uploads with flask-wtf extension. Notice that here person_id must be a foreign key.
+Get all object saved in Database
+```swift
+func load<T: Object>(listOf: T.Type) -> [T] {
+      do {
+          let objects = try Realm().objects(T.self)
+          var list = [T]()
+          for obj in objects {
+              list.append(obj)
+          }
+          return list
+      } catch {}
+      return []
+  }
+```
 
-- Three, recent videos and recent musics , this table is for store the relationship between persons and cases, one person might have many cases likewise one case might have many peoples interested
-
+Add new object to Database
+```swift
+func add(_ object : Object ) {
+      do{
+          let realm = try! Realm()
+          try! realm.write {
+              realm.add(object)
+          }
+      }catch{
+          print ("Can't add")
+      }
+  }
+``` 
 ### Play music and video.
-- Phat nhac 
+- Setup Music/Video
+```swift
+try AVAudioSession.sharedInstance().setMode(.default)
+try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+
+str = UserDefaults.standard.string(forKey: "url")! + videos[position].urlString!
+let videoPathURL = URL(string: str)
+player = AVPlayer(url: videoPathURL! as URL)
+playerLayer = AVPlayerLayer(player: player)
+playerLayer.frame = self.view.frame
+self.view.layer.addSublayer(playerLayer)
+```
+- Play music/video
+```swift
+player.play()
+```
 ![Validation gif](Screenshots/validation.gif)
 ## Pictures
 - List Video and Play Video screen
@@ -57,14 +104,14 @@ For the CS50 final project you have to make a video showning your project,
 [MUZIC PLAYER](https://youtu.be/if2wiRfEgyM)
 
 ## Documentation
-- Link tai lieu Realm Swift
-- Link tai lieu AVPlay
-- Link tai lieu Swift doc
+- [Link tai lieu Realm Swift](https://realm.io/realm-swift/)
+- [Link tai lieu AVPlay](https://developer.apple.com/documentation/avfoundation/avplayer/)
+- [Link tai lieu Swift doc](https://www.swift.org/documentation/)
 
 ## About CS50
 CS50 is a openware course from Havard University and taught by David J. Malan
 
-- Cai thien nhung gi sau khoa hoc
+Through the cs50 course, I have improved my ability to code algorithms. Besides, I also got acquainted with many newer languages ​​such as python, js and new frameworks like flask
 
 Thank you for all CS50.
 
