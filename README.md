@@ -34,18 +34,23 @@ I needed three object for my database:
 - Phat nhac 
 ![Validation gif](Screenshots/validation.gif)
 ## Pictures
-- Login and Adopt page
+- List Video and Play Video screen
 
-| Login | Adopt |
+| List Videos | Play Video |
 | :---: | :---: |
-| <img src="IMG_8357.PNG" width="400">  | <img src="IMG_8357.PNG" width="400">|
+| <img src="IMG_8357.PNG" width="400">  | <img src="IMG_8358.PNG" width="400">|
 
-- Homepage and Responsive show case
+- Recent Music and Sort screen
 
-| Homepage | Responsive Web |
+| Recent Music | Sort |
 | :---: | :---: |
-| <img src="IMG_8357.PNG" width="400"> | <img src="IMG_8357.PNG" width = "400">
+| <img src="IMG_8359.PNG" width="400"> | <img src="IMG_8360.PNG" width = "400">
 
+- Search screen
+
+| Search |
+| :---: |
+| <img src="IMG_8361.PNG" width="400"> |
 
 #### Video Demo:
 For the CS50 final project you have to make a video showning your project,
